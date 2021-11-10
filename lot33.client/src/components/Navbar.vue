@@ -27,6 +27,7 @@
             About
           </router-link>
         </li>
+          <SearchComponent />
       </ul>
       <span class="navbar-text">
         <button

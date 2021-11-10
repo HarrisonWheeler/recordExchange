@@ -5,9 +5,8 @@ export const api = Axios.create({
   timeout: 8000
 })
 
-// REVIEW move this to the server
 
-// export const discogsApi = Axios.create({
-//   discogsUrl,
-//   timeout: 8000
-// })
+export const discogsApi = Axios.create({
+  baseURL: 'https://api.discogs.com/',
+  timeout: 8000
+})
