@@ -1,10 +1,10 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex flex-column align-items-center">
         <img
           alt="logo"
-          src="../assets/img/cw-logo.png"
+          src="https://static.thenounproject.com/png/1225-200.png"
           height="45"
         />
       </div>
@@ -22,16 +22,26 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto">
-        <li>
-          <router-link :to="{ name: 'About' }" class="btn text-success lighten-30 selectable text-uppercase">
+        <!-- <li>
+          <router-link
+            :to="{ name: 'About' }"
+            class="btn text-light lighten-30 selectable text-uppercase"
+          >
             About
           </router-link>
-        </li>
-          <SearchComponent />
+        </li> -->
+        <SearchComponent />
       </ul>
       <span class="navbar-text">
         <button
-          class="btn selectable text-success lighten-30 text-uppercase my-2 my-lg-0"
+          class="
+            btn
+            selectable
+            text-light
+            lighten-30
+            text-uppercase
+            my-2 my-lg-0
+          "
           @click="login"
           v-if="!user.isAuthenticated"
         >
@@ -51,7 +61,7 @@
               height="40"
               class="rounded"
             />
-            <span class="mx-3 text-success lighten-30">{{ user.name }}</span>
+            <span class="mx-3 text-light lighten-30">{{ user.name }}</span>
           </div>
           <div
             class="dropdown-menu p-0 list-group w-100"
@@ -63,7 +73,11 @@
               </div>
             </router-link>
             <div
-              class="list-group-item list-group-item-action hoverable text-danger"
+              class="
+                list-group-item list-group-item-action
+                hoverable
+                text-danger
+              "
               @click="logout"
             >
               <i class="mdi mdi-logout"></i>
@@ -111,10 +125,10 @@ export default {
 a:hover {
   text-decoration: none;
 }
-.nav-link{
+.nav-link {
   text-transform: uppercase;
 }
-.navbar-nav .router-link-exact-active{
+.navbar-nav .router-link-exact-active {
   border-bottom: 2px solid var(--bs-success);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
